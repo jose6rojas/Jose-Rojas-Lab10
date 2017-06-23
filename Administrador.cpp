@@ -27,9 +27,9 @@ int Administrador::getExperienciaLaboral() { return experienciaLaboral; }
 void Administrador::setRango(int rango)
 {
 	if(rango == 1)
-		this -> rango = "Gerente Tiempo Completo";
+		this -> rango = "Gerente a Tiempo Completo";
 	else if(rango == 2)
-		this -> rango = "Gerente Medio-Tiempo";
+		this -> rango = "Gerente a Medio-Tiempo";
 	else
 		this -> rango = "Gerente General";
 }
