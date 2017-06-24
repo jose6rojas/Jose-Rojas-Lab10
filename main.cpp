@@ -297,11 +297,51 @@ int main(int argc, char const *argv[])
 					}
 					else if(op_admin == 2) // Modificar Mesas
 					{
+						cout << "Mesas" << endl;
+						for(int i = 0; i < mesas.size(); i++)
+							cout << i << ". Mesa #" << mesas[i] -> getNumero() << endl;
+						int op_mesa;
+						cout << "Escoja una Mesa para modificar: ";
+						cin >> op_mesa;
+						if(op_mesa < 0 || op_mesa >= mesas.size())
+						{
+							cout << "Debe escoger una valor valido." << endl;
+						}
+						else
+						{
+							Mesa* M;
+							M = mesas[op_mesa];
 
+							int numero;
+							cout << "Ingrese un nuevo numero de Mesa: ";
+							cin >> numero;
+							int tipo;
+							cout << "Tipo\n1. VIP\n2. Clasica\n3. Viajera\nEscoja una opcion: ";
+							cin >> tipo;
+
+							M -> setNumero(numero);
+							M -> setTipo(tipo);
+
+							cout << "La Mesa fue modificada correctamente." << endl;
+						}
 					}
 					else if(op_admin == 3) // Eliminar Mesas
 					{
-
+						cout << "Mesas" << endl;
+						for(int i = 0; i < mesas.size(); i++)
+							cout << i << ". Mesa #" << mesas[i] -> getNumero() << endl;
+						int op_mesa;
+						cout << "Escoja una Mesa para modificar: ";
+						cin >> op_mesa;
+						if(op_mesa < 0 || op_mesa >= mesas.size())
+						{
+							cout << "Debe escoger una valor valido." << endl;
+						}
+						else
+						{
+							// mesas.erase(mesas.begin() + op_mesa);
+							cout << "La Mesa fue eliminada correctamente." << endl;
+						}
 					}
 					else if(op_admin == 4) // Regresar al Menu Principal
 					{ }
