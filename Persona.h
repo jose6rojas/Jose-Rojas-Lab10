@@ -29,6 +29,8 @@ class Persona
 		// numeroID
 		void setNumeroID(string);
 		string getNumeroID();
+
+		virtual void debug();
 };
 
 #endif

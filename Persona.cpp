@@ -22,3 +22,5 @@ int Persona::getEdad() { return edad; }
 // numeroID
 void Persona::setNumeroID(string numeroID) { this -> numeroID = numeroID; }
 string Persona::getNumeroID() { return numeroID; }
+
+void Persona::debug() { }
